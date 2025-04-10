@@ -165,8 +165,17 @@
         <label for="name">Your Name</label>
         <input type="text" id="name" required />
 
-        <label for="address">Your Address</label>
-        <input type="text" id="address" required />
+        <label for="street">Street Address</label>
+        <input type="text" id="street" required />
+
+        <label for="city">City</label>
+        <input type="text" id="city" required />
+
+        <label for="state">State</label>
+        <input type="text" id="state" required />
+
+        <label for="zip">ZIP Code</label>
+        <input type="text" id="zip" required />
 
         <button type="submit">Generate Email</button>
       </form>
@@ -190,6 +199,7 @@ I urge you to reject this proposal and advocate for a fairer, more sustainable p
 Sincerely,  
 [Full Name]  
 [Street Address]  
+[City, State ZIP]  
 [Email Address]
       </code>
     </div>
@@ -203,10 +213,14 @@ Sincerely,
     function sendEmail(event) {
       event.preventDefault();
       const name = document.getElementById('name').value;
-      const address = document.getElementById('address').value;
+      const street = document.getElementById('street').value;
+      const city = document.getElementById('city').value;
+      const state = document.getElementById('state').value;
+      const zip = document.getElementById('zip').value;
 
       const subject = encodeURIComponent("Opposition to Permanent Shelter at 81 S Huntington");
-      const body = encodeURIComponent(`Hello,\n\nI am writing to express my strong opposition to the proposed permanent conversion of 81 South Huntington Ave. into a homeless shelter.\n\nWhen the shelter initially opened, city officials assured residents that this would be a temporary solution. Since the shelter began operating, our neighborhood has experienced a significant decline in safety and quality of life, including an increase in theft, open drug use, discarded needles, harassment of residents, and serious sanitation issues. Despite repeated outreach through 311 and community meetings, Victory Programs, Inc. has failed to respond meaningfully to our concerns.\n\nOur community is diverse and historically underserved. We support compassionate solutions to homelessness, but those solutions must be safe, well-managed, and equitable.\n\nI urge you to reject this proposal and advocate for a fairer, more sustainable path forward.\n\nSincerely,\n${name}\n${address}\n[Email Address]`);
+      const body = encodeURIComponent(`Hello,\n\nI am writing to express my strong opposition to the proposed permanent conversion of 81 South Huntington Ave. into a homeless shelter.\n\nWhen the shelter initially opened, city officials assured residents that this would be a temporary solution. Since the shelter began operating, our neighborhood has experienced a significant decline in safety and quality of life, including an increase in theft, open drug use, discarded needles, harassment of residents, and serious sanitation issues. Despite repeated outreach through 311 and community meetings, Victory Programs, Inc. has failed to respond meaningfully to our concerns.\n\nOur community is diverse and historically underserved. We support compassionate solutions to homelessness, but those solutions must be safe, well-managed, and equitable.\n\nI urge you to reject this proposal and advocate for a fairer, more sustainable path forward.\n\nSincerely,\n${name}\n${street}\n${city}, ${state} ${zip}\n[Email Address]`);
+
       const bccList = [
         "Benjamin.Weber@boston.gov",
         "Michelle.Wu@boston.gov",
@@ -225,10 +239,11 @@ Sincerely,
         "darosaatlarge@gmail.com",
         "sherry.dong@boston.gov",
         "sharon.durkan@boston.gov",
-        "zoning.jpnc@gmail.com"
+        "zoning.jpnc@gmail.com",
+        "shagainstdn@gmail.com
       ].join(",");
-      const mailtoLink = `mailto:cityofficials@example.com?subject=${subject}&body=${body}&bcc=${encodeURIComponent(bccList)}`;
 
+      const mailtoLink = `mailto:?subject=${subject}&body=${body}&bcc=${encodeURIComponent(bccList)}`;
       window.location.href = mailtoLink;
     }
 
