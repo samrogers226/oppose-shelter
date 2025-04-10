@@ -175,7 +175,7 @@
     <div class="help-block">
       <h3>On a computer or want to write it in your own words?</h3>
       <p>Here is who you need to email and a template for you to copy and paste:</p>
-      <p><strong>Email:</strong> cityofficials@example.com</p>
+      <p><strong>Email:</strong> Benjamin.Weber@boston.gov, Michelle.Wu@boston.gov, Tiffany.Chu@boston.gov, Ruthzee.Louijeune@boston.gov, Julia.Mejia@boston.gov, Erin.Murphy@boston.gov, Henry.Santana@boston.gov, Sheila.Dillon@boston.gov, Maccon.Bonner@boston.gov, zbapublicinput@boston.gov, Samantha.Montano@mahouse.gov, Carlos.Rios@mahouse.gov, Liz.Miranda@masenate.gov, info@joshforboston.com, darosaatlarge@gmail.com, sherry.dong@boston.gov, sharon.durkan@boston.gov, zoning.jpnc@gmail.com</p>
       <code>
 Dear [City Official Name],
 
@@ -207,7 +207,27 @@ Sincerely,
 
       const subject = encodeURIComponent("Opposition to Permanent Shelter at 81 S Huntington");
       const body = encodeURIComponent(`Dear [City Official Name],\n\nI am writing to express my strong opposition to the proposed permanent conversion of 81 South Huntington Ave. into a homeless shelter.\n\nWhen the shelter initially opened, city officials assured residents that this would be a temporary solution. Since the shelter began operating, our neighborhood has experienced a significant decline in safety and quality of life, including an increase in theft, open drug use, discarded needles, harassment of residents, and serious sanitation issues. Despite repeated outreach through 311 and community meetings, Victory Programs, Inc. has failed to respond meaningfully to our concerns.\n\nOur community is diverse and historically underserved. We support compassionate solutions to homelessness, but those solutions must be safe, well-managed, and equitable.\n\nI urge you to reject this proposal and advocate for a fairer, more sustainable path forward.\n\nSincerely,\n${name}\n${address}\n[Email Address]`);
-      const mailtoLink = `mailto:cityofficials@example.com?subject=${subject}&body=${body}`;
+      const bccList = [
+        "Benjamin.Weber@boston.gov",
+        "Michelle.Wu@boston.gov",
+        "Tiffany.Chu@boston.gov",
+        "Ruthzee.Louijeune@boston.gov",
+        "Julia.Mejia@boston.gov",
+        "Erin.Murphy@boston.gov",
+        "Henry.Santana@boston.gov",
+        "Sheila.Dillon@boston.gov",
+        "Maccon.Bonner@boston.gov",
+        "zbapublicinput@boston.gov",
+        "Samantha.Montano@mahouse.gov",
+        "Carlos.Rios@mahouse.gov",
+        "Liz.Miranda@masenate.gov",
+        "info@joshforboston.com",
+        "darosaatlarge@gmail.com",
+        "sherry.dong@boston.gov",
+        "sharon.durkan@boston.gov",
+        "zoning.jpnc@gmail.com"
+      ].join(",");
+      const mailtoLink = `mailto:cityofficials@example.com?subject=${subject}&body=${body}&bcc=${encodeURIComponent(bccList)}`;
 
       window.location.href = mailtoLink;
     }
