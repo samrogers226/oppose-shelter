@@ -137,14 +137,15 @@
     </p>
 
     <div class="actions">
-      <a href="https://example.com/sign-petition" target="_blank">Sign the Petition</a>
+      <a href="https://chng.it/8G642zHkC4" target="_blank">Sign the Petition</a>
       <a href="#" onclick="promptEmail()">Join Our Mailing List</a>
-
-      <form id="mailingListForm" action="https://formsubmit.co/samrogers226@gmail.com" method="POST" style="display: none;">
-        <input type="email" name="email" id="userEmail" required>
-        <input type="hidden" name="_subject" value="New Mailing List Signup">
-      </form>
     </div>
+
+    <!-- Hidden form for FormSubmit -->
+    <form id="mailingListForm" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" style="display: none;">
+      <input type="email" name="email" id="userEmail" required>
+      <input type="hidden" name="_subject" value="New Mailing List Signup">
+    </form>
 
     <div class="email-form">
       <h3>Send City Officials a Prewritten Email</h3>
@@ -181,7 +182,7 @@ Sincerely,
       const address = document.getElementById('address').value;
 
       const subject = encodeURIComponent("Opposition to Shelter Zoning Change");
-      const body = encodeURIComponent(`Dear City Officials,%0D%0A%0D%0AI am writing to express my strong opposition to the proposed zoning change that would allow the MH/JP shelter to become a permanent fixture in our neighborhood. The impact on our community has been devastating. Please oppose this change.%0D%0A%0D%0ASincerely,%0D%0A${name}%0D%0A${address}`);
+      const body = encodeURIComponent(`Dear City Officials,\n\nI am writing to express my strong opposition to the proposed zoning change that would allow the MH/JP shelter to become a permanent fixture in our neighborhood. The impact on our community has been devastating. Please oppose this change.\n\nSincerely,\n${name}\n${address}`);
       const mailtoLink = `mailto:cityofficials@example.com?subject=${subject}&body=${body}`;
 
       window.location.href = mailtoLink;
@@ -198,9 +199,8 @@ Sincerely,
     }
 
     function validateEmail(email) {
-    // Simple email validation
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
+      return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+    }
   </script>
 </body>
 </html>
