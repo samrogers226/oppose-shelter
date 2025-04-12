@@ -327,11 +327,19 @@
   <header role="banner">
     Boston Needle Reports Visualization
   </header>
-  <nav role="navigation" aria-label="Main Navigation">
-    <a href="../index.html">Campaign Home</a>
-    <a href="index.html">Needle Reports</a>
-  </nav>
-
+<nav role="navigation" aria-label="Main Navigation">
+  <a href="../index.html">Home</a>
+  <a href="https://chng.it/8G642zHkC4">Sign Petition</a>
+  <a href="#" onclick="promptEmail()">Join Mailing List</a>
+  <a href="../index.html#mailing">Email City Officials</a>
+  <a href="#">Needle Visualization</a>
+</nav>
+<!-- Hidden form for FormSubmit -->
+    <form id="mailingListForm" action="https://formsubmit.co/shagainstdn@gmail.com" method="POST" style="display: none;">
+      <input type="email" name="email" id="userEmail" required aria-label="Email Address">
+      <input type="hidden" name="_subject" value="New Mailing List Signup">
+    </form>
+	
   <!-- Page container now flex-grows to fill remaining space -->
   <div class="page-container">
     <!-- Content Section (Map and Info) -->
@@ -558,6 +566,21 @@ L.control.layers(baseMaps).addTo(map);
 			document.body.classList.remove("dark-mode");
 		  }
 		});
+		
+		    function promptEmail() {
+      const email = prompt("Please enter your email to join our mailing list:");
+      if (email && validateEmail(email)) {
+        document.getElementById('userEmail').value = email;
+        document.getElementById('mailingListForm').submit();
+      } else if (email) {
+        alert("Please enter a valid email address.");
+      }
+    }
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+	
         // Geocoding functions
 
         // Function to geocode an address using OpenStreetMap Nominatim
