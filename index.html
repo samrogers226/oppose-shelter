@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="South Huntington Against Destructive Neighbors - Join us in the fight against zoning changes that threaten our community." />
   <title>South Huntington Against Destructive Neighbors</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
@@ -18,24 +19,60 @@
       background-color: #1a1a1a;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       letter-spacing: 1px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+    
+    nav a:hover {
+      transform: scale(1.1);
+    }
+
+    .hero-image {
+      overflow: hidden;
     }
 
     .hero-image img {
       display: block;
       width: 100%;
-      max-width: 100%;
       height: auto;
       border-bottom: 4px solid #1a1a1a;
+    }
+
+    @media (min-width: 992px) {
+      .hero-image {
+        max-height: 300px;
+      }
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     main {
       max-width: 800px;
       margin: 2rem auto;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       background-color: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -62,11 +99,38 @@
       background-color: #d32f2f;
       border-radius: 8px;
       text-decoration: none;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
 
     .actions a:hover {
       background-color: #b71c1c;
+      transform: scale(1.05);
+    }
+
+    /* New Needle Preview Section */
+    .needle-preview {
+      background-color: #f9f9f9;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .needle-preview h3 {
+      margin-top: 0;
+    }
+    .needle-preview a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #1976d2;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .needle-preview a:hover {
+      background-color: #115293;
+      transform: scale(1.05);
     }
 
     .help-block {
@@ -127,76 +191,99 @@
       font-size: 1rem;
       border-radius: 6px;
       cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
     .email-form button:hover {
       background-color: #115293;
+      transform: scale(1.05);
     }
-	
-	@media (min-width: 992px) {  /* Adjust the breakpoint as needed */
-	  .hero-image {
-	    max-height: 300px;       /* Set an appropriate height */
-	    overflow: hidden;        /* Hide any overflow for a clean look */
-	  }
-	  .hero-image img {
-	    width: 100%;
-		  height: 100%;            /* Fill the container height */
-		  object-fit: cover;       /* Crop the image as necessary without distorting it */
-	  }
-	}
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    
+    .back-to-top:hover {
+      background-color: #115293;
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header role="banner">
     South Huntington Against Destructive Neighbors
   </header>
+  
+  <nav role="navigation" aria-label="Main Navigation">
+    <a href="#">Home</a>
+    <a href="https://chng.it/8G642zHkC4">Sign Petition</a>
+    <a href="#" onclick="promptEmail()">Join Mailing List</a>
+	<a href="#mailing">Email City Officials</a>
+    <a href="Needles311">Needle Visualization</a>
+  </nav>
 
   <div class="hero-image">
     <img src="https://assets.change.org/photos/8/vo/jl/rrVOjlnlmtvaxpL-800x450-noPad.jpg?1744305427" alt="Neighborhood protest image" />
   </div>
 
   <main>
-    <p>
-      Since the "temporary" opening of the low threshold shelter at the former Envision Hotel at 81 S Huntington in November 2021, our neighborhood has declined significantly. Theft, vandalism, loitering, littering, open drug use, and discarded needles are now a part of daily life. The operator of the shelter is attempting to change the zoning to make this shelter a permanent fixture in our neighborhood. We cannot let this stand.
-    </p>
+    <section id="petition">
+      <p>
+        Since the "temporary" opening of the low threshold shelter at the former Envision Hotel at 81 S Huntington in November 2021, our neighborhood has declined significantly. Theft, vandalism, loitering, littering, open drug use, and discarded needles are now a part of daily life. The operator of the shelter is attempting to change the zoning to make this shelter a permanent fixture in our neighborhood. We cannot let this stand.
+      </p>
 
-    <div class="actions">
-      <a href="https://chng.it/8G642zHkC4" target="_blank">Sign the Petition</a>
-      <a href="#" onclick="promptEmail()">Join Our Mailing List</a>
-    </div>
+      <div class="actions">
+        <a href="https://chng.it/8G642zHkC4" target="_blank">Sign the Petition</a>
+        <a href="#" onclick="promptEmail()">Join Our Mailing List</a>
+      </div>
+    </section>
+
+
 
     <!-- Hidden form for FormSubmit -->
     <form id="mailingListForm" action="https://formsubmit.co/shagainstdn@gmail.com" method="POST" style="display: none;">
-      <input type="email" name="email" id="userEmail" required>
+      <input type="email" name="email" id="userEmail" required aria-label="Email Address">
       <input type="hidden" name="_subject" value="New Mailing List Signup">
     </form>
 
-    <div class="email-form">
-      <h3>Send City Officials a Prewritten Email <span style="font-size: 0.9rem; font-weight: normal;">(May not work for all mail clients)</span></h3>
+    <section id="mailing" class="email-form">
+      <h3>Send City Officials a Prewritten Email <span style="font-size: 0.9rem; font-weight: normal;">(Works on mobile only)</span></h3>
       <form onsubmit="sendEmail(event)">
         <label for="name">Your Name</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" required aria-label="Your Name">
 
         <label for="street">Street Address</label>
-        <input type="text" id="street" required />
+        <input type="text" id="street" required aria-label="Street Address">
 
         <label for="city">City</label>
-        <input type="text" id="city" required />
+        <input type="text" id="city" required aria-label="City">
 
         <label for="state">State</label>
-        <input type="text" id="state" required />
+        <input type="text" id="state" required aria-label="State">
 
         <label for="zip">ZIP Code</label>
-        <input type="text" id="zip" required />
+        <input type="text" id="zip" required aria-label="ZIP Code">
 
         <button type="submit">Generate Email</button>
       </form>
-    </div>
+    </section>
 
     <div class="help-block">
-      <h3>Form doesn't work for you or want to write it in your own words?</h3>
+      <h3>On a computer or want to write it in your own words?</h3>
       <p>Here is who you need to email and a template for you to copy and paste:</p>
-      <p><strong>Email:</strong> Benjamin.Weber@boston.gov, Michelle.Wu@boston.gov, Tiffany.Chu@boston.gov, Ruthzee.Louijeune@boston.gov, Julia.Mejia@boston.gov, Erin.Murphy@boston.gov, Henry.Santana@boston.gov, Sheila.Dillon@boston.gov, Maccon.Bonner@boston.gov, zbapublicinput@boston.gov, Samantha.Montano@mahouse.gov, Carlos.Rios@mahouse.gov, Liz.Miranda@masenate.gov, info@joshforboston.com, darosaatlarge@gmail.com, sherry.dong@boston.gov, sharon.durkan@boston.gov, zoning.jpnc@gmail.com, shagainstdn@gmail.com</p>
+      <p><strong>Email:</strong> Benjamin.Weber@boston.gov, Michelle.Wu@boston.gov, Tiffany.Chu@boston.gov, Ruthzee.Louijeune@boston.gov, Julia.Mejia@boston.gov, Erin.Murphy@boston.gov, Henry.Santana@boston.gov, Sheila.Dillon@boston.gov, Maccon.Bonner@boston.gov, zbapublicinput@boston.gov, Samantha.Montano@mahouse.gov, Carlos.Rios@boston.gov, Liz.Miranda@masenate.gov, info@joshforboston.com, darosaatlarge@gmail.com, sherry.dong@boston.gov, sharon.durkan@boston.gov, zoning.jpnc@gmail.com, shagainstdn@gmail.com</p>
       <code>
 Hello,
 
@@ -211,14 +298,30 @@ I urge you to reject this proposal and advocate for a fairer, more sustainable p
 Sincerely,  
 [Full Name]  
 [Street Address]  
-[City, State ZIP]  
+[City, State ZIP]
       </code>
     </div>
+    <!-- New Needle Reports Preview Section -->
+    <section id="needlePreview" class="needle-preview">
+      <h3>Needle Reports Map</h3>
+      <p>Explore an interactive map of needle reports from around Boston that illustrate the impact on our community.</p>
 
+	  <a href="Needles311">
+		<img 
+		  src="images/needle-preview.png"
+		  alt="Heatmap preview of reported needles"
+		  style="max-width: 100%; border-radius: 8px; margin: 1rem 0;"
+		/>
+	  </a>
+	  <a href="Needles311">View Full Visualization</a>
+	</section>
     <p style="margin-top: 3rem; font-style: italic; text-align: center;">
       For more information please contact us at <a href="mailto:shagainstdn@gmail.com">shagainstdn@gmail.com</a>
     </p>
+	
   </main>
+
+  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Back to Top">&#8679;</button>
 
   <script>
     function sendEmail(event) {
@@ -244,14 +347,13 @@ Sincerely,
         "Maccon.Bonner@boston.gov",
         "zbapublicinput@boston.gov",
         "Samantha.Montano@mahouse.gov",
-        "Carlos.Rios@mahouse.gov",
+        "Carlos.Rios@boston.gov",
         "Liz.Miranda@masenate.gov",
         "info@joshforboston.com",
         "darosaatlarge@gmail.com",
         "sherry.dong@boston.gov",
         "sharon.durkan@boston.gov",
         "zoning.jpnc@gmail.com",
-        "shagainstdn@gmail.com"
       ].join(",");
 
       const mailtoLink = `mailto:?subject=${subject}&body=${body}&bcc=${encodeURIComponent(bccList)}`;
