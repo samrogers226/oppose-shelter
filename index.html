@@ -132,6 +132,18 @@
     .email-form button:hover {
       background-color: #115293;
     }
+	
+	@media (min-width: 992px) {  /* Adjust the breakpoint as needed */
+	  .hero-image {
+	    max-height: 300px;       /* Set an appropriate height */
+	    overflow: hidden;        /* Hide any overflow for a clean look */
+	  }
+	  .hero-image img {
+	    width: 100%;
+		  height: 100%;            /* Fill the container height */
+		  object-fit: cover;       /* Crop the image as necessary without distorting it */
+	  }
+	}
   </style>
 </head>
 <body>
@@ -160,7 +172,7 @@
     </form>
 
     <div class="email-form">
-      <h3>Send City Officials a Prewritten Email <span style="font-size: 0.9rem; font-weight: normal;">(Works on mobile only)</span></h3>
+      <h3>Send City Officials a Prewritten Email <span style="font-size: 0.9rem; font-weight: normal;">(May not work for all mail clients)</span></h3>
       <form onsubmit="sendEmail(event)">
         <label for="name">Your Name</label>
         <input type="text" id="name" required />
@@ -182,7 +194,7 @@
     </div>
 
     <div class="help-block">
-      <h3>On a computer or want to write it in your own words?</h3>
+      <h3>Form doesn't work for you or want to write it in your own words?</h3>
       <p>Here is who you need to email and a template for you to copy and paste:</p>
       <p><strong>Email:</strong> Benjamin.Weber@boston.gov, Michelle.Wu@boston.gov, Tiffany.Chu@boston.gov, Ruthzee.Louijeune@boston.gov, Julia.Mejia@boston.gov, Erin.Murphy@boston.gov, Henry.Santana@boston.gov, Sheila.Dillon@boston.gov, Maccon.Bonner@boston.gov, zbapublicinput@boston.gov, Samantha.Montano@mahouse.gov, Carlos.Rios@mahouse.gov, Liz.Miranda@masenate.gov, info@joshforboston.com, darosaatlarge@gmail.com, sherry.dong@boston.gov, sharon.durkan@boston.gov, zoning.jpnc@gmail.com, shagainstdn@gmail.com</p>
       <code>
