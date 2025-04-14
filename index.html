@@ -210,8 +210,9 @@
 		}
 
 		.events-section h3 {
-		  margin-top: 0;
-		}
+		margin-top: 0;
+		font-size: 1.3rem;
+    }
 
 		.events-section ul {
 		  list-style-type: disc;
@@ -225,6 +226,55 @@
 		  line-height: 1.6;
 		}
 
+		.faq-section {
+		  margin-top: 2rem;
+		  padding: 1.5rem;
+		  background-color: #fff;
+		  border-radius: 8px;
+		  border-left: 6px solid #1976d2;
+		  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		}
+
+		.faq-section h3 {
+		  margin-top: 0;
+		font-size: 1.3rem;
+    }
+
+
+		.faq-item {
+		  border-top: 1px solid #e0e0e0;
+		  padding: 1rem 0;
+		}
+
+		.faq-item:first-of-type {
+		  border-top: none;
+		}
+
+		.faq-question {
+		  font-weight: bold;
+		  font-size: 1.1rem;
+		  cursor: pointer;
+		  transition: color 0.3s;
+		}
+
+		.faq-question:hover {
+		  color: #1976d2;
+		}
+
+		.faq-answer {
+		  margin-top: 0.5rem;
+		  font-size: 1.1rem;
+		  line-height: 1.6;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.3s ease, padding 0.3s ease;
+		  padding: 0 0;
+		}
+
+.faq-item.active .faq-answer {
+  max-height: 500px; /* Adjust according to your content's typical height */
+  padding: 0.5rem 0;
+}
     
     /* Back to Top Button */
     .back-to-top {
@@ -250,10 +300,20 @@
 	@media (max-width: 550px) {
 		nav a {
 		  margin: 0 .5rem;
+		  font-size: .7rem;
 		}
+		  .faq-section {
+			padding: 1rem;
+		  }
+		  
+		  .faq-question, .faq-answer {
+			font-size: 1rem;
+		  }
+}
     }
   </style>
 </head>
+
 <body>
   <header role="banner">
     South Huntington Against Destructive Neighbors
@@ -264,6 +324,7 @@
     <a href="#" onclick="promptEmail()">Join Mailing List</a>
 	<a href="#mailing">Email City Officials</a>
 	<a href="#FAQ">FAQ</a>
+	<a href="#events">Events</a>
   </nav>
 
   <div class="hero-image">
@@ -341,46 +402,76 @@ Sincerely,
 	</section>
 	
 	<div>
-	<section id="FAQ">
+	<section id="FAQ" class="faq-section">
 	    <br>
-		<br>
 		<h3>Frequently Asked Questions (FAQ)</h3>
-		<h4>1. Who are we?</h4>
-		We are a group of local residents and business owners in the South Huntington Corridor united by serious concerns regarding the permanent conversion of the Envision Hotel into a homeless shelter. Our members have directly experienced negative impacts from the current low-threshold shelter, including increased drug activity, discarded needles, trash, vandalism, harassment, and serious safety issues. We are committed to advocating for safer, more effective, and equitable solutions.
-		<h4>2. What is the proposal, and how will it affect me?</h4>
-		Victory Programs seeks city Zoning Board of Appeal approval to permanently convert the Envision Hotel at 81 S. Huntington Avenue into a low-threshold homeless shelter. Initially, this facility was established as a temporary measure during the Mass & Cass crisis, but now Victory Programs wants permanent status, despite significant neighborhood concerns. If approved, we anticipate continued increases in safety issues, crime, drug activity, trash, and negative impacts on community stability and property values.
-		<h4>3. Are you against helping the homeless?</h3>
-		Absolutely not. We firmly believe in compassionate and effective solutions to homelessness. Our opposition is specifically against the manner in which this proposal has been implemented and managed. We advocate for decentralized, smaller-scale shelters that are well-managed, secure, and distributed fairly across the city. Examples from other cities demonstrate that smaller, service-intensive programs have higher success rates in helping unhoused individuals achieve lasting stability.
-		<h4>4. Why does the group oppose this particular proposal?</h3>
-		Our opposition stems from consistent, unaddressed neighborhood concerns such as rising crime rates, drug activity, public safety threats, sanitation issues, and harassment of residents. Additionally, Victory Programs has demonstrated a low success rate in transitioning clients out of homelessness and has repeatedly dismissed legitimate neighborhood feedback, raising doubts about their capability and willingness to thoughtfully manage a permanent shelter.
-		<h4>5. What are the specific safety concerns with a low-threshold shelter in our neighborhood?</h3>
-		Our primary concerns include:
-		<ul>
-		<li>Significant increases in theft, vandalism, and violent incidents—including a recent deadly shooting.
-		<li>A dramatic rise in drug-related activities, with discarded needles frequently found throughout neighborhood parks and streets. <a href="https://needles311.surge.sh" target="_blank">View needle reports map.</a>
-		<li>Harassment and intimidation of residents, particularly women, near the shelter.
-		<li>Sanitation issues, unmanaged trash, and vermin problems.
-		</ul>
-		<h4>6. What exactly is a "low-threshold" shelter?</h3>
-		A low-threshold shelter accepts individuals without requiring sobriety, participation in support programs, or background checks. While these shelters aim for accessibility, they can also present greater challenges related to safety, neighborhood impacts, and client success if not effectively managed.
-		<h4>7. Won't this shelter reduce homelessness in our neighborhood?</h3>
-		No. Victory Programs' own data indicates only a roughly 30% success rate in transitioning individuals to permanent housing. Without robust management and adequate resources, low-threshold shelters often become magnets for increased homelessness, drug activity, and related issues rather than solutions.
-		<h4>8. Who can I contact with concerns or questions?</h3>
-		We encourage you to reach out directly to local government officials and Victory Programs to voice your concerns clearly and respectfully. We have created an <a href="#mailing">email template</a> above which includes the email addresses of the relevant city officials.
-		<h4>9. Has the city conducted proper community outreach or impact studies?</h3>
-		No. To date, the city has not conducted adequate community engagement, with only limited opportunity for neighbors to be publicly heard on this issue, nor has the city or Victory Programs, Inc. provided transparent environmental or impact studies addressing critical issues such as public safety, crime, and sanitation. We urge the city to perform a thorough impact analysis and engage transparently with community stakeholders before any further decisions are made.
-		<h4>10. How can I get involved or stay informed?</h3>
-		We encourage you to take action by:
-		<ul>
-		<li><a href="https://chng.it/8G642zHkC4" target="_blank">Signing our online petition</a>
-		<li><a href="#" onclick="promptEmail()">Joining our mailing/email list for updates on group meetings and public hearings</a>
-		<li><a href="#mailing">Using our standardized email template to voice concerns directly to local officials</a>
-		</ul>
+		<div class="faq-item">
+			<div class="faq-question">1. Who are we?</div>
+			<div class="faq-answer">We are a group of local residents and business owners in the South Huntington Corridor united by serious concerns regarding the permanent conversion of the Envision Hotel into a homeless shelter. Our members have directly experienced negative impacts from the current low-threshold shelter, including increased drug activity, discarded needles, trash, vandalism, harassment, and serious safety issues. We are committed to advocating for safer, more effective, and equitable solutions.
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">2. What is the proposal, and how will it affect me?</div>
+			<div class="faq-answer">Victory Programs seeks city Zoning Board of Appeal approval to permanently convert the Envision Hotel at 81 S. Huntington Avenue into a low-threshold homeless shelter. Initially, this facility was established as a temporary measure during the Mass & Cass crisis, but now Victory Programs wants permanent status, despite significant neighborhood concerns. If approved, we anticipate continued increases in safety issues, crime, drug activity, trash, and negative impacts on community stability and property values.
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">3. Are you against helping the homeless?</div>
+			<div class="faq-answer">Absolutely not. We firmly believe in compassionate and effective solutions to homelessness. Our opposition is specifically against the manner in which this proposal has been implemented and managed. We advocate for decentralized, smaller-scale shelters that are well-managed, secure, and distributed fairly across the city. Examples from other cities demonstrate that smaller, service-intensive programs have higher success rates in helping unhoused individuals achieve lasting stability.
+		</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">4. Why does the group oppose this particular proposal?</div>
+			<div class="faq-answer">Our opposition stems from consistent, unaddressed neighborhood concerns such as rising crime rates, drug activity, public safety threats, sanitation issues, and harassment of residents. Additionally, Victory Programs has demonstrated a low success rate in transitioning clients out of homelessness and has repeatedly dismissed legitimate neighborhood feedback, raising doubts about their capability and willingness to thoughtfully manage a permanent shelter.
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">5. What are the specific safety concerns with a low-threshold shelter in our neighborhood?</div>
+			<div class="faq-answer">Our primary concerns include:
+				<ul>
+					<li>Significant increases in theft, vandalism, and violent incidents—including a recent deadly shooting.
+					<li>A dramatic rise in drug-related activities, with discarded needles frequently found throughout neighborhood parks and streets. <a href="https://needles311.surge.sh" target="_blank">View needle reports map.</a>
+					<li>Harassment and intimidation of residents, particularly women, near the shelter.
+					<li>Sanitation issues, unmanaged trash, and vermin problems.
+				</ul>
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">6. What exactly is a "low-threshold" shelter?</div>
+			<div class="faq-answer">A low-threshold shelter accepts individuals without requiring sobriety, participation in support programs, or background checks. While these shelters aim for accessibility, they can also present greater challenges related to safety, neighborhood impacts, and client success if not effectively managed.
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">7. Won't this shelter reduce homelessness in our neighborhood?</div>
+			<div class="faq-answer">No. Victory Programs' own data indicates only a roughly 30% success rate in transitioning individuals to permanent housing. Without robust management and adequate resources, low-threshold shelters often become magnets for increased homelessness, drug activity, and related issues rather than solutions.
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">8. Who can I contact with concerns or questions?</div>
+			<div class="faq-answer">We encourage you to reach out directly to local government officials and Victory Programs to voice your concerns clearly and respectfully. We have created an <a href="#mailing">email template</a> above which includes the email addresses of the relevant city officials.
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">9. Has the city conducted proper community outreach or impact studies?</div>
+			<div class="faq-answer">No. To date, the city has not conducted adequate community engagement, with only limited opportunity for neighbors to be publicly heard on this issue, nor has the city or Victory Programs, Inc. provided transparent environmental or impact studies addressing critical issues such as public safety, crime, and sanitation. We urge the city to perform a thorough impact analysis and engage transparently with community stakeholders before any further decisions are made.
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-question">10. How can I get involved or stay informed?</div>
+			<div class="faq-answer">We encourage you to take action by:
+				<ul>
+					<li><a href="https://chng.it/8G642zHkC4" target="_blank">Signing our online petition</a>
+					<li><a href="#" onclick="promptEmail()">Joining our mailing/email list for updates on group meetings and public hearings</a>
+					<li><a href="#mailing">Using our standardized email template to voice concerns directly to local officials</a>
+				</ul>
+			</div>
+		</div>
+		<br>
 		<strong>Together, we can advocate for safer, fairer, and more effective solutions for our community.</strong>
-
+<br>
+<br>
 	</section>
-	<br>
-	<br>
+	
 	</div>
 	<section id="needlePreview" class="needle-preview">
 	<br>
@@ -486,6 +577,17 @@ Sincerely,
     function validateEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
-  </script>
+	
+  document.addEventListener("DOMContentLoaded", function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(function(question) {
+      question.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+  });
+</script>
 </body>
 </html>
