@@ -289,10 +289,22 @@
 		  padding: 0 0;
 		}
 
-.faq-item.active .faq-answer {
-  max-height: 500px; /* Adjust according to your content's typical height */
-  padding: 0.5rem 0;
-}
+		.faq-item.active .faq-answer {
+		  max-height: 500px; /* Adjust according to your content's typical height */
+		  padding: 0.5rem 0;
+		}
+
+		.faq-link {
+		  color: #1976d2;        /* Use your primary theme color */
+		  text-decoration: none; /* Remove underline by default */
+		  transition: color 0.3s ease, text-decoration 0.3s ease;
+		}
+
+		.faq-link:hover,
+		.faq-link:focus {
+		  color: #115293;        /* Darker shade on hover/focus */
+		  text-decoration: underline; /* Underline for clarity */
+		}
     
     /* Back to Top Button */
     .back-to-top {
@@ -448,7 +460,7 @@ Sincerely,
 			<div class="faq-answer">Our primary concerns include:
 				<ul>
 					<li>Significant increases in theft, vandalism, and violent incidents—including a recent deadly shooting.
-					<li>A dramatic rise in drug-related activities, with discarded needles frequently found throughout neighborhood parks and streets. <a href="https://needles311.surge.sh" target="_blank">View needle reports map.</a>
+					<li>A dramatic rise in drug-related activities, with discarded needles frequently found throughout neighborhood parks and streets. <a href="https://needles311.surge.sh" target="_blank" class="event-link">View needle reports map.</a>
 					<li>Harassment and intimidation of residents, particularly women, near the shelter.
 					<li>Sanitation issues, unmanaged trash, and vermin problems.
 				</ul>
@@ -466,7 +478,7 @@ Sincerely,
 		</div>
 		<div class="faq-item">
 			<div class="faq-question">8. Who can I contact with concerns or questions?</div>
-			<div class="faq-answer">We encourage you to reach out directly to local government officials and Victory Programs to voice your concerns clearly and respectfully. We have created an <a href="#mailing">email template</a> above which includes the email addresses of the relevant city officials.
+			<div class="faq-answer">We encourage you to reach out directly to local government officials and Victory Programs to voice your concerns clearly and respectfully. We have created an <a href="#mailing" class="event-link">email template</a> above which includes the email addresses of the relevant city officials.
 			</div>
 		</div>
 		<div class="faq-item">
@@ -478,9 +490,9 @@ Sincerely,
 			<div class="faq-question">10. How can I get involved or stay informed?</div>
 			<div class="faq-answer">We encourage you to take action by:
 				<ul>
-					<li><a href="https://chng.it/8G642zHkC4" target="_blank">Signing our online petition</a>
-					<li><a href="#" onclick="promptEmail()">Joining our mailing/email list for updates on group meetings and public hearings</a>
-					<li><a href="#mailing">Using our standardized email template to voice concerns directly to local officials</a>
+					<li><a href="https://chng.it/8G642zHkC4" target="_blank" class="event-link">Signing our online petition</a>
+					<li><a href="#" onclick="promptEmail()" class="event-link">Joining our mailing/email list for updates on group meetings and public hearings</a>
+					<li><a href="#mailing" class="event-link">Using our standardized email template to voice concerns directly to local officials</a>
 				</ul>
 			</div>
 		</div>
