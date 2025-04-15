@@ -116,6 +116,7 @@
       background-color: #f0f4ff;
       border-radius: 8px;
       border-left: 6px solid #1976d2;
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .needle-preview h3 {
       margin-top: 0;
@@ -141,6 +142,7 @@
       padding: 1.5rem;
       border-radius: 8px;
       border-left: 6px solid #d32f2f;
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .help-block h3 {
@@ -164,6 +166,7 @@
       background-color: #f0f4ff;
       border-radius: 8px;
       border-left: 6px solid #1976d2;
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .email-form h3 {
@@ -207,9 +210,12 @@
 		  background-color: #f9f9f9;
 		  border-radius: 8px;
 		  border-left: 6px solid #1976d2;
+		  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 		}
-
-		.events-section h3 {
+	.events-section a:hover {
+      text-shadow: 3px darkblue;
+    }
+	.events-section h3 {
 		margin-top: 0;
 		font-size: 1.3rem;
     }
@@ -226,6 +232,18 @@
 		  line-height: 1.6;
 		}
 
+		.event-link {
+		  color: #1976d2;        /* Use your primary theme color */
+		  text-decoration: none; /* Remove underline by default */
+		  transition: color 0.3s ease, text-decoration 0.3s ease;
+		}
+
+		.event-link:hover,
+		.event-link:focus {
+		  color: #115293;        /* Darker shade on hover/focus */
+		  text-decoration: underline; /* Underline for clarity */
+		}
+		
 		.faq-section {
 		  margin-top: 2rem;
 		  padding: 1.5rem;
@@ -479,10 +497,10 @@ Sincerely,
   <h3>Upcoming Events</h3>
   <ul>
     <li>
-      <strong><a href="https://calendar.app.google/kdAAV1cKgfuiHmFM7" target="_blank">Shelter Opposition Neighborhood Meeting</a></strong> – April 15, 2025 at 7pm – Join us in discussing our community's future.
+      <strong><a href="https://calendar.app.google/kdAAV1cKgfuiHmFM7" target="_blank" class="event-link">Shelter Opposition Neighborhood Meeting</a></strong> – April 15, 2025 at 7pm – Join us in discussing our community's future.
 	  <ul>
 		<li>
-		<a href="https://us06web.zoom.us/j/83409480336" target="_blank">Join Zoom Meeting</a> – Meeting ID: 834 0948 0336
+		<a href="https://us06web.zoom.us/j/83409480336" target="_blank" class="event-link">Join Zoom Meeting</a> – Meeting ID: 834 0948 0336
 		</li>
 		</ul>
     </li>
@@ -491,7 +509,7 @@ Sincerely,
       <strong>Jamaica Plain Neighborhood Council Zoning Committee</strong> – April 16, 2025 at 7pm – Victory Programs, Inc. will present their shelter proposal to the JPNC Zoning Committee.
 	  	  <ul>
 		<li>
-		<a href="https://bit.ly/JPZoningMeeting" target="_blank">Join Zoom Meeting</a>
+		<a href="https://bit.ly/JPZoningMeeting" target="_blank" class="event-link">Join Zoom Meeting</a>
 		</li>
 		</ul>
     </li>
